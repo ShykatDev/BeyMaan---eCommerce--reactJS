@@ -1,0 +1,127 @@
+[
+  {
+    "id": 0,
+    "product_name": "Women Winter Black Coat",
+    "product_price": 70,
+    "description": "The jacket is a lightweight, long-sleeved, button-up. It is made of a soft, light-blue canvas. It is a very versatile jacket, but is usually worn in the fall and winter months.",
+    "banner": "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "details_images": [
+      "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://images.pexels.com/photos/3286500/pexels-photo-3286500.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+    ],
+    "total_ratings": 4.9,
+    "reviews": ["Nice Product", "Good Quality"],
+    "comments": [
+      "The product quality is awesome.",
+      "This is so comfortable to wear and easy to use. Highly recomneded."
+    ],
+    "ratings": [4.8, 4.9],
+    "faq_question": ["Is the size available for childen?", "What is the material for this product?"],
+    "faq_answer": ["No, This product is only for yougers.", "Jeans and leather."],
+    "type": ["women", "all"]
+  },
+  {
+    "id": 1,
+    "product_name": "Man in Blue Denim Jacket",
+    "product_price": 90,
+    "description": "The jacket is an essential item for any guy. It's a great way to look cool, feel warm, and protect your body from the elements. This jacket has a sleek and classic design that will make you stand out in the crowd. The jacket has a thin, sleek material that will keep you comfortable while still being stylish.",
+    "banner": "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "details_images": [
+      "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+    ],
+    "total_ratings": 4.7,
+    "reviews": ["Nice Product", "Good Quality"],
+    "comments": [
+      "The product quality is awesome.",
+      "This is so comfortable to wear and easy to use. Highly recomneded."
+    ],
+    "ratings": [4.8, 4.7],
+    "faq_question": ["Is the size available for childen?", "What is the material for this product?"],
+    "faq_answer": ["No, This product is only for yougers.", "Jeans and leather."],
+    "type": ["men", "all"]
+  },
+  {
+    "id": 2,
+    "product_name": "Man in Black Adidas",
+    "product_price": 60,
+    "description": "A fashionable jacket is a must-have in any wardrobe. It can be worn with a dress, blouse, or skirt. It's also a great way to add a layer of protection against the weather and chilly fall days.",
+    "banner": "https://images.pexels.com/photos/1192601/pexels-photo-1192601.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "details_images": [
+      "https://images.pexels.com/photos/1192601/pexels-photo-1192601.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    ],
+    "total_ratings": 4.6,
+    "reviews": ["Nice Product", "Good Quality"],
+    "comments": [
+      "The product quality is awesome.",
+      "This is so comfortable to wear and easy to use. Highly recomneded."
+    ],
+    "ratings": [4.5, 4.7],
+    "faq_question": ["Is the size available for childen?", "What is the material for this product?"],
+    "faq_answer": ["No, This product is only for yougers.", "Jeans and leather."],
+    "type": ["men", "all"]
+  },
+  {
+    "id": 3,
+    "product_name": "Black and White Cap",
+    "product_price": 30,
+    "description": "The cap has a wide brim, which is a big plus for when it's raining and your hair gets wet. It's made of 100% cotton, and it's even machine-washable.",
+    "banner": "https://images.pexels.com/photos/1878821/pexels-photo-1878821.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "details_images": [
+      "https://images.pexels.com/photos/1878821/pexels-photo-1878821.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://images.pexels.com/photos/704857/pexels-photo-704857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    ],
+    "total_ratings": 4.5,
+    "reviews": ["Nice Product", "Good Quality"],
+    "comments": [
+      "The product quality is awesome.",
+      "This is so comfortable to wear and easy to use. Highly recomneded."
+    ],
+    "ratings": [4.3, 4.7],
+    "faq_question": ["Is the size available for childen?", "What is the material for this product?"],
+    "faq_answer": ["No, This product is only for yougers.", "Jeans and leather."],
+    "type": ["wearable", "all"]
+  },
+  {
+    "id": 4,
+    "product_name": "Red and White snicker",
+    "product_price": 30,
+    "description": "The cap has a wide brim, which is a big plus for when it's raining and your hair gets wet. It's made of 100% cotton, and it's even machine-washable.",
+    "banner": "https://images.pexels.com/photos/1240892/pexels-photo-1240892.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "details_images": [
+      "https://images.pexels.com/photos/1240892/pexels-photo-1240892.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://images.pexels.com/photos/2112736/pexels-photo-2112736.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+    ],
+    "total_ratings": 10,
+    "reviews": ["Nice Product", "Good Quality"],
+    "comments": [
+      "The product quality is awesome.",
+      "This is so comfortable to wear and easy to use. Highly recomneded."
+    ],
+    "ratings": [10, 10],
+    "faq_question": ["Is the size available for childen?", "What is the material for this product?"],
+    "faq_answer": ["No, This product is only for yougers.", "Jeans and leather."],
+    "type": ["wearable", "all"]
+  },
+  {
+    "id": 5,
+    "product_name": "Black Smartwatch",
+    "product_price": 30,
+    "description": "The cap has a wide brim, which is a big plus for when it's raining and your hair gets wet. It's made of 100% cotton, and it's even machine-washable.",
+    "banner": "https://images.pexels.com/photos/4041176/pexels-photo-4041176.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "details_images": [
+      "https://images.pexels.com/photos/4041176/pexels-photo-4041176.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://images.pexels.com/photos/4041181/pexels-photo-4041181.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    ],
+    "total_ratings": 4.7,
+    "reviews": ["Nice Product", "Good Quality"],
+    "comments": [
+      "The product quality is awesome.",
+      "This is so comfortable to wear and easy to use. Highly recomneded."
+    ],
+    "ratings": [4.8, 4.7],
+    "faq_question": ["Is the size available for childen?", "What is the material for this product?"],
+    "faq_answer": ["No, This product is only for yougers.", "Jeans and leather."],
+    "type": ["wearable", "all"]
+  }
+]

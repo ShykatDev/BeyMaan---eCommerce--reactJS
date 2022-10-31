@@ -1,0 +1,73 @@
+.navbar {
+  width: 100%;
+  height: 15vh;
+  padding: 1% 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .logo {
+    h1 {
+      color: var(--dark);
+      font-weight: 700;
+
+      span {
+        color: var(--secondary);
+        font-style: italic;
+      }
+    }
+  }
+
+  .linkItems {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      
+      .navLinks {
+        color: var(--dark);
+        text-decoration: none;
+        width: 100px;
+        height: auto;
+        transition: all 0.3s;
+
+        &:hover {
+          color: var(--secondary);
+        }
+      }
+    }
+
+    .other {
+      width: 20%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .otherItem {
+        display: flex;
+        align-items: center;
+        i {
+          margin: 0 5px;
+        }
+        p {
+          font-weight: 600;
+        }
+        .cartItem {
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: var(--secondary) !important;
+  font-weight: 600;
+}

@@ -1,0 +1,78 @@
+.shopCard {
+  width: 43%;
+  height: 21rem;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  overflow: hidden;
+
+  .product__img {
+    width: 100%;
+    height: 60%;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+
+    }
+  }
+  p{
+    padding: 20px 10px;
+  }
+  .details__sec {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 10px;
+
+    button {
+      width: 7rem;
+      height: 2.5rem;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid var(--secondary);
+      background: white;
+      cursor: pointer;
+      transition: all 0.1s;
+
+      &:hover {
+        background: var(--secondary) !important;
+      }
+    }
+
+    .more {
+      color: var(--dark);
+      transition: all 0.1s;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  .addTo {
+    width: 100%;
+    height: 2.7rem;
+    background: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    p{
+        color: white;
+        font-size: 0.8rem;
+    }
+  }
+}

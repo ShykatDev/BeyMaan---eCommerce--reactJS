@@ -1,0 +1,154 @@
+.perticularProduct {
+  width: 100%;
+  height: auto;
+  padding: 1% 20%;
+
+  h2 {
+    font-weight: 600;
+    margin: 2rem 0 3rem 0;
+  }
+
+  .productDetails {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .mainBanner {
+      width: 55%;
+      height: 30rem;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .detailsSection {
+      width: 40%;
+      h1 {
+        font-weight: 600;
+        font-size: 3rem;
+        color: var(--dark);
+      }
+      button {
+        width: 7rem;
+        height: 2.5rem;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid var(--secondary);
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.1s;
+        margin: 1rem 0 2rem 0;
+
+        &:hover {
+          background: var(--secondary) !important;
+        }
+      }
+      p {
+        color: #363636;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .extraBanner {
+    margin-top: 3rem;
+    width: 20%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .extraImg {
+      width: 5rem;
+      height: 4rem;
+      object-fit: cover;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    //   border: 2px solid var(--dark);
+    }
+    .activeBanner {
+      border: 2px solid var(--dark);
+    }
+  }
+
+  hr{
+    margin: 2rem 0 3rem 0;
+  }
+
+  .reviews{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .rating{
+        span{
+            i{
+                color: var(--secondary);
+            }
+        }
+    }
+  }
+
+  .comments{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+
+    .reviewTitle{
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      h3{
+        font-weight: 600;
+      }
+      .ratingStar{
+        padding: 0.2rem 0.4rem;
+        background: var(--secondary);
+        color: white;
+        border-radius: 0.2rem;
+        margin-right: 1rem;
+      }
+    }
+
+    .reviewComment{
+      margin: 0.7rem 0 2rem 0;
+      color: #363636;
+      font-weight: 300;
+    }
+  }
+
+  .FAQ{
+    .question{
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .answer{
+      color: #363636;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .backToShop{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .backShop{
+      padding: 0.7rem 1rem;
+      background: var(--secondary);
+      color: white;
+      border-radius: 1rem;
+      font-size: 0.7rem;
+    }
+  }
+}
