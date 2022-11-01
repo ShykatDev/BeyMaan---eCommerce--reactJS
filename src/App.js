@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import { Provider } from "react-redux";
+import store from "./store/store";
 import "./styles/index.scss";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
@@ -15,33 +17,31 @@ function App() {
   //States
   const [productDetails, setProductDetails] = useState([]);
 
-  // useEffect(() => {
-  //   console.log(productDetails);
-  // }, []);
-
   return (
     <>
-      <Router>
-        <Navbar />
+      <Provider store={store}>
+        <Router>
+          <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route
-            path="/shop"
-            element={<Shop setProductDetails={setProductDetails} />}
-          ></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/faq" element={<Faq />}></Route>
-          <Route
-            path="/product"
-            element={<Product productDetails={productDetails} />}
-          ></Route>
-          <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/checkout" element={<Checkout />}></Route>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route
+              path="shop"
+              element={<Shop setProductDetails={setProductDetails} />}
+            ></Route>
+            <Route path="contact" element={<Contact />}></Route>
+            <Route path="faq" element={<Faq />}></Route>
+            <Route
+              path="product"
+              element={<Product productDetails={productDetails} />}
+            ></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/checkout" element={<Checkout />}></Route>
 
-          <Route path="*" element={<ErrorPage />}></Route>
-        </Routes>
-      </Router>
+            <Route path="*" element={<ErrorPage />}></Route>
+          </Routes>
+        </Router>
+      </Provider>
     </>
   );
 }

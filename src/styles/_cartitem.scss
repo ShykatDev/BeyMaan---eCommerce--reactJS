@@ -11,7 +11,7 @@
     align-items: center;
 
     .detailsCol {
-      width: 70%;
+      width: 80%;
       height: auto;
       display: flex;
       align-items: center;
@@ -25,35 +25,24 @@
           height: 100%;
           object-fit: cover;
           border-radius: 0.4rem;
+          border: 1px solid var(--dark);
         }
       }
 
       .details {
         margin-left: 2rem;
+        width: 100%;
 
         h4 {
           font-weight: 600;
           margin-bottom: 0.4rem;
         }
 
-        .addButtons {
-          width: auto;
-          height: auto;
-          border: 1px solid var(--secondary);
-          background: white;
-          border-radius: 0.3rem;
-          overflow: hidden;
-
-          button {
-            width: 1.5rem;
-            border: none;
-            outline: none;
-            background: white;
-            cursor: pointer;
-          }
-
-          span {
-            padding: 0 1.5rem;
+        .description{
+          width: 100%;
+          p{
+            font-size: 0.6rem;
+            color: #363636;
           }
         }
       }
@@ -76,9 +65,11 @@
 
         .checkout {
           color: var(--secondary);
+          cursor: pointer;
         }
         .remove {
           color: var(--danger);
+          cursor: pointer;
         }
       }
     }

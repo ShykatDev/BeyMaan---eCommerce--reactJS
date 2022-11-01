@@ -1,9 +1,25 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addItems } from "../store/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Product = ({ productDetails }) => {
+  const cartItems = useSelector((state) => state.cart);
   const [activeBanner, setActiveBanner] = useState(productDetails.banner);
+
+  const dispatch = useDispatch();
+
+  const handleAddingCart = () => {
+    dispatch(addItems(productDetails));
+    toast.success("Item added", {
+      position: "top-center",
+      pauseOnHover: false,
+      autoClose: 1000,
+    });
+  };
 
   const activeBannerChange = (image) => {
     setActiveBanner(image);
@@ -22,6 +38,15 @@ const Product = ({ productDetails }) => {
           <h1>{productDetails.product_name}</h1>
           <button>Price: ${productDetails.product_price}</button>
           <p>{productDetails.description}</p>
+          <button
+            onClick={() => {
+              cartItems.includes(productDetails)
+                ? window.alert("Product already added!")
+                : handleAddingCart();
+            }}
+          >
+            <i class="lni lni-cart"></i> add to cart
+          </button>
         </div>
       </div>
       <div className="extraBanner">
@@ -78,6 +103,7 @@ const Product = ({ productDetails }) => {
           Back to Shop
         </Link>
       </div>
+      <ToastContainer />
     </div>
   );
 };

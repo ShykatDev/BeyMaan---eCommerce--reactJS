@@ -22,10 +22,9 @@
       height: 100%;
       object-fit: cover;
       border-radius: 5px;
-
     }
   }
-  p{
+  p {
     padding: 20px 10px;
   }
   .details__sec {
@@ -48,6 +47,7 @@
 
       &:hover {
         background: var(--secondary) !important;
+        color: white;
       }
     }
 
@@ -69,10 +69,14 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    
-    p{
-        color: white;
-        font-size: 0.8rem;
+    transition: all 0.3s;
+
+    p {
+      color: white;
+      font-size: 0.8rem;
+    }
+    &:hover {
+      background: #476cf3;
     }
   }
 }

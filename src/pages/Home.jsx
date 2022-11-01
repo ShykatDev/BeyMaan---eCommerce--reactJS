@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "../components/Card";
+import Footer from "../components/Footer";
 import productData from "../Data/products.json";
 
 const Home = () => {
@@ -80,6 +81,8 @@ const Home = () => {
           <p>Easy Return Policy</p>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

@@ -1,34 +1,89 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
+import { useSelector, useDispatch } from "react-redux";
+import { removeAll } from "../store/cartSlice";
+import Footer from "../components/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart);
+
+  const totalAmount = cartItems.map((item) => item.product_price);
+
+  //Calculate the subtotal value
+  let subTotal = 0;
+  const shippingCost = 7;
+  const tax = 10;
+  for (let i = 0; i < totalAmount.length; i++) {
+    subTotal += totalAmount[i];
+  }
+
+  const removeAllItems = () => {
+    dispatch(removeAll());
+    toast.error("All item removed", {
+      position: "top-center",
+      pauseOnHover: false,
+      autoClose: 1000,
+    });
+  };
+
   return (
-    <div className="cartPage">
-      <h2>Cart Items</h2>
-      <div className="subTitle">
-        <p>Hey #user#, here is your all cart items.</p>
-        <span className="removeAll">remove all</span>
-      </div>
+    <>
+      <div className="cartPage">
+        <h2>Cart Items</h2>
+        <div className="subTitle">
+          {cartItems.length === 0 ? (
+            <i style={{ color: "red" }}>No item found</i>
+          ) : (
+            <p>Hey #user, here is your all cart items.</p>
+          )}
 
-      <CartItem />
-      <CartItem />
-      <CartItem />
+          <span className="removeAll" onClick={() => removeAllItems()}>
+            remove all
+          </span>
+        </div>
 
-      <div className="totalCart">
-        <div className="subTotal">
-          <div className="line"></div>
-          <div className="totalPrice">
-            <h5>Sub Total: </h5>
-            <h5>$200</h5>
+        {cartItems.map((cartItem) => (
+          <CartItem item={cartItem} />
+        ))}
+
+        <div className="totalCart">
+          <div className="subTotal">
+            <div className="line"></div>
+            <div className="totalPrice">
+              <p>Tax: </p>
+              <p>${cartItems.length === 0 ? 0 : `${tax}`}.00</p>
+            </div>
+            <div className="totalPrice">
+              <p>Shipping Cose: </p>
+              <p>${cartItems.length === 0 ? 0 : `${shippingCost}`}.00</p>
+            </div>
+            <div className="totalPrice">
+              <h5>Sub Total: </h5>
+              <h5>
+                $
+                {cartItems.length === 0
+                  ? 0
+                  : `${subTotal + tax + shippingCost}`}
+                .00
+              </h5>
+            </div>
+
+            <button className="checkoutAll">
+              <Link to="/checkout" className="checkBtn">
+                Checkout All
+              </Link>
+            </button>
           </div>
-
-          <button className="checkoutAll">
-            <Link to='/checkout' className="checkBtn">Checkout All</Link>
-          </button>
         </div>
       </div>
-    </div>
+
+      <Footer />
+      <ToastContainer />
+    </>
   );
 };
 
