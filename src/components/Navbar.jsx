@@ -29,10 +29,10 @@ const Navbar = () => {
             <i className="lni lni-user"></i>
             <p>User</p>
           </div>
-          <div className="otherItem">
+          <Link to='/cart' className="otherItem">
             <i className="lni lni-cart"></i>
             <p className="cartItem">0</p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

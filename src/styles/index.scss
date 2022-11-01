@@ -13,6 +13,7 @@
   --primary: #f6f6f6;
   --secondary: #597dff;
   --dark: #232323;
+  --danger: #ff4444;
 }
 
 body {
@@ -27,4 +28,6 @@ body {
 @import "./card";
 @import "./shopcard";
 @import "./shop";
-@import './product'
+@import "./product";
+@import "./cart";
+@import "./cartitem";

@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
 import Product from "./pages/Product";
 import ErrorPage from "./components/ErrorPage";
+import Cart from "./pages/Cart";
+import Checkout from "./components/Checkout";
 
 function App() {
   //States
@@ -26,22 +28,16 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route
             path="/shop"
-            element={
-              <Shop
-                setProductDetails={setProductDetails}
-              />
-            }
+            element={<Shop setProductDetails={setProductDetails} />}
           ></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/faq" element={<Faq />}></Route>
           <Route
             path="/product"
-            element={
-              <Product
-                productDetails={productDetails}
-              />
-            }
+            element={<Product productDetails={productDetails} />}
           ></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/checkout" element={<Checkout />}></Route>
 
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
