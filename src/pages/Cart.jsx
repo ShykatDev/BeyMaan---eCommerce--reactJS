@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import { useSelector, useDispatch } from "react-redux";
 import { removeAll } from "../store/cartSlice";
+import { checkoutItem, removeAllChekout } from "../store/checkoutSlice";
 import Footer from "../components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Cart = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart);
+  const checkoutItems = useSelector((state) => state.checkout);
 
   const totalAmount = cartItems.map((item) => item.product_price);
 
@@ -22,12 +24,25 @@ const Cart = () => {
   }
 
   const removeAllItems = () => {
-    dispatch(removeAll());
-    toast.error("All item removed", {
-      position: "top-center",
-      pauseOnHover: false,
-      autoClose: 1000,
-    });
+    if (cartItems.length !== 0) {
+      dispatch(removeAll());
+      toast.error("All item removed", {
+        position: "top-center",
+        pauseOnHover: false,
+        autoClose: 1000,
+      });
+    }else{
+      toast.error("Cart has already empty", {
+        position: "top-center",
+        pauseOnHover: false,
+        autoClose: 1000,
+      });
+    }
+  };
+
+  const allCheckoutItemsHandler = () => {
+    dispatch(removeAllChekout());
+    cartItems.map((item) => dispatch(checkoutItem(item)));
   };
 
   return (
@@ -73,7 +88,11 @@ const Cart = () => {
             </div>
 
             <button className="checkoutAll">
-              <Link to="/checkout" className="checkBtn">
+              <Link
+                onClick={() => allCheckoutItemsHandler()}
+                to={cartItems.length === 0 ? "" : "/checkout"}
+                className="checkBtn"
+              >
                 Checkout All
               </Link>
             </button>

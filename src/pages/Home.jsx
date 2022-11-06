@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
-import productData from "../Data/products.json";
+import featuredData from "../Data/featured_products.json";
 
 const Home = () => {
   const [banner, setBannner] = useState("/images/banner1.png");
@@ -47,7 +47,7 @@ const Home = () => {
         <h2>Featured Products</h2>
 
         <div className="cards">
-          {productData.map((product) => (
+          {featuredData.map((product) => (
             <Card
               pdct_name={product.product_name}
               pdct_banner={product.banner}

@@ -32,7 +32,13 @@
         font-weight: 600;
         font-size: 3rem;
         color: var(--dark);
+        color: var(--secondary);
       }
+      h4 {
+        font-weight: 600;
+        margin-bottom: 0.6rem;
+      }
+
       button {
         width: 7rem;
         height: 2.5rem;
@@ -43,12 +49,30 @@
         cursor: pointer;
         transition: all 0.1s;
         margin: 1rem 0 2rem 0;
+      }
 
-        &:hover {
-          background: var(--secondary) !important;
+      .button-group {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+
+        .addToCart-btn {
+          &:hover {
+            background: var(--secondary) !important;
+            color: white;
+          }
+        }
+        .buyNow-btn {
+          background: var(--secondary);
           color: white;
+
+          &:hover {
+            background: #3454c6 !important;
+            color: white;
+          }
         }
       }
+
       p {
         color: #363636;
         font-weight: 300;
@@ -70,18 +94,18 @@
       object-fit: cover;
       border-radius: 0.4rem;
       cursor: pointer;
-    //   border: 2px solid var(--dark);
+      //   border: 2px solid var(--dark);
     }
     .activeBanner {
       border: 2px solid var(--dark);
     }
   }
 
-  hr{
+  hr {
     margin: 2rem 0 3rem 0;
   }
 
-  .reviews{
+  .reviews {
     width: 100%;
     height: 3rem;
     display: flex;
@@ -89,29 +113,35 @@
     align-items: center;
     margin-bottom: 3rem;
 
-    .rating{
-        span{
-            i{
-                color: var(--secondary);
-            }
+    h2{
+      .reviewCount{
+        font-size: 0.7rem;
+      }
+    }
+
+    .rating {
+      span {
+        i {
+          color: var(--secondary);
         }
+      }
     }
   }
 
-  .comments{
+  .comments {
     width: 100%;
     height: auto;
     margin-bottom: 5rem;
 
-    .reviewTitle{
+    .reviewTitle {
       width: 100%;
       display: flex;
       align-items: center;
 
-      h3{
+      h3 {
         font-weight: 600;
       }
-      .ratingStar{
+      .ratingStar {
         padding: 0.2rem 0.4rem;
         background: var(--secondary);
         color: white;
@@ -120,31 +150,31 @@
       }
     }
 
-    .reviewComment{
+    .reviewComment {
       margin: 0.7rem 0 2rem 0;
       color: #363636;
       font-weight: 300;
     }
   }
 
-  .FAQ{
-    .question{
+  .FAQ {
+    .question {
       font-weight: 600;
       margin-bottom: 1rem;
     }
-    .answer{
+    .answer {
       color: #363636;
       font-weight: 300;
       margin-bottom: 2rem;
     }
   }
 
-  .backToShop{
+  .backToShop {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 
-    .backShop{
+    .backShop {
       padding: 0.7rem 1rem;
       background: var(--secondary);
       color: white;

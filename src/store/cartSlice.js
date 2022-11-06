@@ -14,7 +14,6 @@ const cartSlice = createSlice({
     },
     removeAll(state, action) {
       state.splice(0, state.length);
-      console.log("removed all");
     },
   },
 });

@@ -3,11 +3,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addItems } from "../store/cartSlice";
+import { checkoutItem, removeAllChekout } from "../store/checkoutSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Product = ({ productDetails }) => {
   const cartItems = useSelector((state) => state.cart);
+  const checkoutItems = useSelector((state) => state.checkout);
+
   const [activeBanner, setActiveBanner] = useState(productDetails.banner);
 
   const dispatch = useDispatch();
@@ -25,6 +28,16 @@ const Product = ({ productDetails }) => {
     setActiveBanner(image);
   };
 
+  const addToCheckoutHandler = () => {
+    if (checkoutItems.length === 0) {
+      dispatch(checkoutItem(productDetails));
+    } else {
+
+      dispatch(removeAllChekout(productDetails));
+      dispatch(checkoutItem(productDetails));
+    }
+  };
+
   return (
     <div className="perticularProduct">
       <h2>Product Details</h2>
@@ -37,16 +50,29 @@ const Product = ({ productDetails }) => {
         <div className="detailsSection">
           <h1>{productDetails.product_name}</h1>
           <button>Price: ${productDetails.product_price}</button>
+          <h4>Details:</h4>
           <p>{productDetails.description}</p>
-          <button
-            onClick={() => {
-              cartItems.includes(productDetails)
-                ? window.alert("Product already added!")
-                : handleAddingCart();
-            }}
-          >
-            <i class="lni lni-cart"></i> add to cart
-          </button>
+          <div className="button-group">
+            <button
+              className="addToCart-btn"
+              onClick={() => {
+                cartItems.includes(productDetails)
+                  ? toast.warn("Product already added!")
+                  : handleAddingCart();
+              }}
+            >
+              <i class="lni lni-cart"></i> add to cart
+            </button>
+            <button className="buyNow-btn">
+              <Link
+                onClick={() => addToCheckoutHandler()}
+                style={{ color: "White" }}
+                to="/checkout"
+              >
+                Buy Now
+              </Link>
+            </button>
+          </div>
         </div>
       </div>
       <div className="extraBanner">
@@ -63,7 +89,12 @@ const Product = ({ productDetails }) => {
       </div>
       <hr />
       <div className="reviews">
-        <h2>Reviews</h2>
+        <h2>
+          Reviews{" "}
+          <span className="reviewCount">
+            ( {productDetails.ratings.length} )
+          </span>
+        </h2>
         <h2 className="rating">
           Ratings:{" "}
           <span>
